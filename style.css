@@ -169,7 +169,7 @@ dd {
 
 /* Make default font-size 1rem and add smooth scrolling to anchors */
 html {
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 @media (prefers-reduced-motion: no-preference) {
   html {
@@ -185,7 +185,7 @@ body {
   font-family: 'Latin Modern', Georgia, Cambria, 'Times New Roman', Times, serif;
   line-height: 1.8;
 
-  max-width: 80ch;
+  max-width: 140ch;
   min-height: 100vh;
   overflow-x: hidden;
   margin: 0 auto;
@@ -455,6 +455,13 @@ figcaption::before {
   content: 'Figure ' counter(figcaption) '. ';
   font-weight: bold;
 }
+caption {
+  text-align: left;
+  font-size: 0.923em;
+  padding: 0.25em 0.25em 0;
+  width: 100%;
+  margin-left: 0;
+}
 
 /* Center align the title */
 h1:first-child {
@@ -653,7 +660,7 @@ input.sidenote-toggle {
 /* Center title and paragraph */
 .abstract,
 .abstract p {
-  text-align: center;
+  text-align: left;
   margin-top: 0;
 }
 .abstract {
@@ -744,4 +751,25 @@ h4,
 h5,
 h6 {
   margin-bottom: 0.8rem;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.abstract {
+  flex: 1;
+  margin-right: 20px;
+}
+
+figure {
+  flex: 1;
+  margin-left: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
