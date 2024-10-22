@@ -17,11 +17,18 @@
   <meta property="og:type" content="website" />
 
   <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="stylesheet" href="https://latex.vercel.app/style.css"> -->
   <link rel="stylesheet" href="prism/prism.css" />
 </head>
 
 <!-- <body id="top" class="latex-dark"> -->
 <body id="top">
+  <script>
+    // Switch to CDN CSS if not in local environment
+    if (window.location.hostname !== 'localhost') {
+      document.getElementById('style-link').href = 'https://latex.vercel.app/style.css';
+    }
+  </script>
   <header>
     <h1>Jeongsik Park</h1>
     <!-- <p class="author">
