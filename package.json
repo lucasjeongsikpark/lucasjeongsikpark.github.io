@@ -32,5 +32,8 @@
   "homepage": "https://latex.vercel.app",
   "devDependencies": {
     "vite": "^4.4.9"
+  },
+  "dependencies": {
+    "latex.css": "^1.12.0"
   }
 }
