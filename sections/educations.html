@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education - Jeongsik Park</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #333;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    section {
+      padding-bottom: 40px;
+    }
+
+    .education-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .education-item .details {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .details b {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .details i {
+      font-style: italic;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .details span {
+      display: block;
+      margin: 3px 0;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .date {
+      white-space: nowrap;
+      font-size: 14px;
+      color: #555;
+    }
+
+    #educations ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    #educations li {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #educations li:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <a href="../index.html">Go Home</a>
+      </ul>
+    </nav>
+    <h1>Education</h1>
+  </header>
+  <main>
+    <section id="educations">
+      <ul>
+        <li class="education-item">
+          <div class="details">
+            <span><b>University of Southern California</b></span>
+            <span><i>Master of Science in Computer Science</i></span>
+          </div>
+          <div class="date">(Expected) May 2026</div>
+        </li>
+
+        <li class="education-item">
+          <div class="details">
+            <span><b>University of Texas at Dallas</b></span>
+            <span><i>Bachelor of Science in Computer Science</i> - GPA: 3.94</span>
+          </div>
+          <div class="date">May 2024</div>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
