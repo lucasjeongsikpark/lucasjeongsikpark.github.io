@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages  # 워크플로우 이름
+
+on:
+  push:
+    branches:
+      - main  # main 브랜치에 push될 때 실행됨
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # GitHub에서 사용할 실행 환경 (Ubuntu 최신 버전)
+
+    steps:
+      - name: Checkout repository  # 현재 GitHub 레포지토리를 Actions 환경으로 가져옴
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js  # Node.js 환경 설정 (필요하면 버전 변경 가능)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Create config.js with GA_MEASUREMENT_ID  # GA Tracking ID를 포함하는 config.js 생성
+        run: echo "const CONFIG = { GA_MEASUREMENT_ID: '${{ secrets.GA_MEASUREMENT_ID }}' };" > config.js
+
+      - name: Build the project  # (필요하면 빌드 수행)
+        run: |
+          npm install  # npm 패키지 설치 (프로젝트에 따라 필요)
+          npm run build  # 빌드 실행 (필요한 경우)
+
+      - name: Deploy to GitHub Pages  # GitHub Pages에 배포
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # 배포할 브랜치 (GitHub Pages는 보통 gh-pages 브랜치를 사용)
+          folder: .  # 배포할 폴더 (빌드된 파일이 들어 있는 디렉토리)

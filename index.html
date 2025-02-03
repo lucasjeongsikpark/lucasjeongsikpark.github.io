@@ -22,15 +22,13 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    fetch('.env')
-      .then(response => response.text())
-      .then(text => {
-      const GA_MEASUREMENT_ID = text.match(/GA_TRACKING_ID=(.*)/)[1];
-      gtag('config', GA_MEASUREMENT_ID);
-      });
+    fetch('./config.js')
+    .then(() => {
+      gtag('config', CONFIG.GA_MEASUREMENT_ID);
+    });
+
   </script>
   <!-- End Google Analytics -->>
-
 </head>
 
 <body id="top">
