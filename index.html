@@ -17,31 +17,15 @@
   <link rel="stylesheet" href="prism/prism.css" />
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-17Z1T6Q1FH"></script>
   <script>
-    // Initialize dataLayer for Google Analytics
     window.dataLayer = window.dataLayer || [];
-    
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    // Fetch the config.js file to retrieve the GA_MEASUREMENT_ID dynamically
-    fetch('./config.js')
-      .then(response => response.text())  // Read config.js as a text file
-      .then(text => {
-        eval(text);  // Execute config.js to define the CONFIG object
-
-        // Ensure CONFIG and GA_MEASUREMENT_ID exist before using them
-        if (CONFIG && CONFIG.GA_MEASUREMENT_ID) {
-          gtag('js', new Date());  // Initialize Google Analytics
-          gtag('config', CONFIG.GA_MEASUREMENT_ID);  // Set up GA tracking
-        } else {
-          console.error("GA_MEASUREMENT_ID is missing in config.js");
-        }
-      })
-      .catch(error => console.error("Failed to load config.js", error));
+    gtag('config', 'G-17Z1T6Q1FH');
   </script>
   <!-- End Google Analytics -->
-
 </head>
 
 <body id="top">
