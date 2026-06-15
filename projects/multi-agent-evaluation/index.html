@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multi-Agent Evaluation System — Jeongsik Park</title>
+  <meta name="description" content="LLM-as-a-Judge and Multi-Agent Debate Evaluation." />
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/prism/prism.css">
+  <style>
+    .project-page {
+      margin-top: 1rem;
+    }
+
+    .project-page section + section {
+      margin-top: 1.3rem;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      border: 1px solid hsl(0 0% 15%);
+      padding: 0.5rem 0.85rem;
+      border-radius: 0.35rem;
+      color: inherit;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background: hsl(0 0% 95%);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Multi-Agent Evaluation System</h1>
+    <p class="subtitle">LLM-as-a-Judge and Multi-Agent Debate Evaluation</p>
+    <p class="muted">Aug 2025 -- Nov 2025</p>
+  </header>
+
+  <main class="project-page">
+    <section>
+      <h2>Overview</h2>
+      <p>This project surveys Multi-Agent Debate Evaluation Frameworks (MADEF) and evaluates them as a scalable alternative to human judgment. It compares four representative MADEF systems across open-domain QA, multi-step reasoning, and medical QA.</p>
+    </section>
+
+    <section>
+      <h2>Technical Approach</h2>
+      <p>The report examines how multiple LLM agents debate and judge AI-generated outputs, then aggregate rubric scores into a final decision. It focuses on robustness, interpretability, and the cost of using local open-weight judge models.</p>
+    </section>
+
+    <section>
+      <h2>Evaluation Setup</h2>
+      <p>Experiments compare Debatable-Intelligence, MORE, DEBATE, and ChatEval using standardized prompts, rubrics, and datasets. The setup measures judge consistency, latency, score variance, and alignment with human judgments.</p>
+    </section>
+
+    <section>
+      <h2>Results / Observations</h2>
+      <ul>
+        <li>MADEFs can approximate human judgment across several domains while varying significantly in cost and computational complexity.</li>
+        <li>Multi-agent debate exposes reasoning traces that improve interpretability compared to single-agent judge approaches.</li>
+        <li>More complex MADEFs do not always outperform lightweight configurations, highlighting a practical tradeoff between robustness and efficiency.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <p>
+        <a class="button" href="https://github.com/lucasjeongsikpark/Multi-Agent-Evaluation-System" target="_blank" rel="noopener">[GitHub Code]</a>
+        <a class="button" href="/assets/pdfs/multi-agent-evaluation-report.pdf" target="_blank" rel="noopener">[PDF Report]</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <!-- This page is intentionally unlisted; not linked from site navigation or sitemap. -->
+  </footer>
+
+  <script async src="/prism/prism.js"></script>
+</body>
+</html>

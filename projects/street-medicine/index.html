@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Optimizing Care Delivery in Street Medicine — Jeongsik Park</title>
+  <meta name="description" content="Machine Learning and Robust Optimization for Street Medicine Operations." />
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/prism/prism.css">
+  <style>
+    .project-page {
+      margin-top: 1rem;
+    }
+
+    .project-page section + section {
+      margin-top: 1.3rem;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      border: 1px solid hsl(0 0% 15%);
+      padding: 0.5rem 0.85rem;
+      border-radius: 0.35rem;
+      color: inherit;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background: hsl(0 0% 95%);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Optimizing Care Delivery in Street Medicine</h1>
+    <p class="subtitle">Machine Learning and Robust Optimization for Street Medicine Operations</p>
+    <p class="muted">Aug 2025 -- Dec 2025</p>
+  </header>
+
+  <main class="project-page">
+    <section>
+      <h2>Overview</h2>
+      <p>Developed an ML-driven operations research pipeline using XGBoost, SHAP, and robust linear programming to model provider productivity and generate scheduling targets for street medicine teams.</p>
+    </section>
+
+    <section>
+      <h2>Technical Approach</h2>
+      <p>Analyzed three months of encounter-level data and 3,928 team-day observations from the USC Keck Street Medicine Program. XGBoost models achieved strong performance (R² ≈ 0.92), and SHAP interpretability identified concentrated provider workload, clinical time, and MD/PA staffing mix as key productivity drivers.</p>
+    </section>
+
+    <section>
+      <h2>Evaluation</h2>
+      <p>Designed a distributionally robust linear program to determine how many patients each team should schedule to reliably achieve six completed visits per day. The analysis showed RN capacity was not binding, while completion-rate uncertainty was the key limiting factor.</p>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <p>
+        <a class="button" href="/assets/pdfs/optimizing-care-delivery-in-street-medicine.pdf" target="_blank" rel="noopener">[PDF Report]</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Unlisted project page. No raw or sensitive data included. -->
+  </footer>
+  <script async src="/prism/prism.js"></script>
+</body>
+</html>

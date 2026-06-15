@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Constrained Decoding for NL2SQL — Jeongsik Park</title>
+  <meta name="description" content="Schema-Aware Structured Generation with vLLM, Outlines, and XGrammar." />
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/prism/prism.css">
+  <style>
+    .project-page {
+      margin-top: 1rem;
+    }
+
+    .project-page section + section {
+      margin-top: 1.3rem;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      border: 1px solid hsl(0 0% 15%);
+      padding: 0.5rem 0.85rem;
+      border-radius: 0.35rem;
+      color: inherit;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background: hsl(0 0% 95%);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Constrained Decoding for NL2SQL</h1>
+    <p class="subtitle">Schema-Aware Structured Generation with vLLM, Outlines, and XGrammar</p>
+    <p class="muted">Jan 2026 -- May 2026</p>
+  </header>
+
+  <main class="project-page">
+    <section>
+      <h2>Overview</h2>
+      <p>Built a vLLM-based NL2SQL pipeline with schema-aware constrained decoding, evaluating Qwen3-0.6B in both thinking and non-thinking modes across WikiSQL and Spider.</p>
+    </section>
+
+    <section>
+      <h2>Motivation</h2>
+      <p>Freeform decoding often produces invalid or non-executable SQL queries. This project studies whether decoding-time structural control can improve reliability without retraining the model.</p>
+    </section>
+
+    <section>
+      <h2>Methods</h2>
+      <p>Compared two constrained decoding methods: XGrammar, a context-free grammar approach, and Outlines, a regular-expression/finite-state method. Constraints were designed on WikiSQL and then transferred to Spider to test generalization.</p>
+    </section>
+
+    <section>
+      <h2>Evaluation</h2>
+      <p>Measured valid SQL rate, executable rate, execution accuracy, and latency over paired experiments. On WikiSQL, constrained decoding improved SQL validity and execution accuracy. On Spider, the same constraints transferred poorly and could degrade performance, showing the need for distribution-aware decoder design.</p>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <p>
+        <a class="button" href="https://github.com/lucasjeongsikpark/Constrained-Decoding-for-NL2SQL" target="_blank" rel="noopener">[GitHub Code]</a>
+        <a class="button" href="/assets/pdfs/constrained-decoding-for-nl2sql-report.pdf" target="_blank" rel="noopener">[PDF Report]</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Unlisted project page: not included in sitemap or navigation -->
+  </footer>
+  <script async src="/prism/prism.js"></script>
+</body>
+</html>
