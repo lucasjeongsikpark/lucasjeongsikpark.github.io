@@ -31,11 +31,36 @@
     .button:hover {
       background: hsl(0 0% 95%);
     }
+
+    .report-viewer {
+      border: 1px solid hsl(0 0% 85%);
+      padding: 1rem;
+      margin-bottom: 2rem;
+      background: hsl(210 20% 98%);
+    }
+
+    .report-frame {
+      width: 100%;
+      min-height: 780px;
+      border: 1px solid hsl(0 0% 85%);
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Constrained Decoding for NL2SQL</h1>
+    <p class="subtitle">Schema-Aware Structured Generation with vLLM, Outlines, and XGrammar</p>
+    <p class="muted">Jan 2026 -- May 2026</p>
+  </header>
+
+  <main class="project-page">
+    <section id="report-viewer" class="report-viewer" style="display:none;">
+      <h2>Report Preview</h2>
+      <iframe id="report-frame" class="report-frame" src="" frameborder="0"></iframe>
+    </section>
+
+    <section>
+      <h2>Overview</h2>
     <p class="subtitle">Schema-Aware Structured Generation with vLLM, Outlines, and XGrammar</p>
     <p class="muted">Jan 2026 -- May 2026</p>
   </header>
@@ -65,7 +90,7 @@
       <h2>Links</h2>
       <p>
         <a class="button" href="https://github.com/lucasjeongsikpark/Constrained-Decoding-for-NL2SQL" target="_blank" rel="noopener">[GitHub Code]</a>
-        <a class="button" href="/assets/pdfs/constrained-decoding-for-nl2sql-report.pdf" target="_blank" rel="noopener">[PDF Report]</a>
+        <button class="button" type="button" id="pdf-button" data-report="/assets/pdfs/constrained-decoding-for-nl2sql-report.pdf">[PDF Report]</button>
       </p>
     </section>
   </main>
@@ -73,6 +98,15 @@
   <footer>
     <!-- Unlisted project page: not included in sitemap or navigation -->
   </footer>
+  <script>
+    document.getElementById('pdf-button').addEventListener('click', function () {
+      const viewer = document.getElementById('report-viewer');
+      const frame = document.getElementById('report-frame');
+      frame.src = this.dataset.report;
+      viewer.style.display = 'block';
+      viewer.scrollIntoView({behavior:'smooth'});
+    });
+  </script>
   <script async src="/prism/prism.js"></script>
 </body>
 </html>

@@ -31,11 +31,36 @@
     .button:hover {
       background: hsl(0 0% 95%);
     }
+
+    .report-viewer {
+      border: 1px solid hsl(0 0% 85%);
+      padding: 1rem;
+      margin-bottom: 2rem;
+      background: hsl(210 20% 98%);
+    }
+
+    .report-frame {
+      width: 100%;
+      min-height: 780px;
+      border: 1px solid hsl(0 0% 85%);
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Optimizing Care Delivery in Street Medicine</h1>
+    <p class="subtitle">Machine Learning and Robust Optimization for Street Medicine Operations</p>
+    <p class="muted">Aug 2025 -- Dec 2025</p>
+  </header>
+
+  <main class="project-page">
+    <section id="report-viewer" class="report-viewer" style="display:none;">
+      <h2>Report Preview</h2>
+      <iframe id="report-frame" class="report-frame" src="" frameborder="0"></iframe>
+    </section>
+
+    <section>
+      <h2>Overview</h2>
     <p class="subtitle">Machine Learning and Robust Optimization for Street Medicine Operations</p>
     <p class="muted">Aug 2025 -- Dec 2025</p>
   </header>
@@ -59,7 +84,7 @@
     <section>
       <h2>Links</h2>
       <p>
-        <a class="button" href="/assets/pdfs/optimizing-care-delivery-in-street-medicine.pdf" target="_blank" rel="noopener">[PDF Report]</a>
+        <button class="button" type="button" id="pdf-button" data-report="/assets/pdfs/optimizing-care-delivery-in-street-medicine.pdf">[PDF Report]</button>
       </p>
     </section>
   </main>
@@ -67,6 +92,15 @@
   <footer>
     <!-- Unlisted project page. No raw or sensitive data included. -->
   </footer>
+  <script>
+    document.getElementById('pdf-button').addEventListener('click', function () {
+      const viewer = document.getElementById('report-viewer');
+      const frame = document.getElementById('report-frame');
+      frame.src = this.dataset.report;
+      viewer.style.display = 'block';
+      viewer.scrollIntoView({behavior:'smooth'});
+    });
+  </script>
   <script async src="/prism/prism.js"></script>
 </body>
 </html>
