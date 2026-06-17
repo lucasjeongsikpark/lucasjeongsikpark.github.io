@@ -12,7 +12,8 @@
   ],
   "scripts": {
     "prepack": "vite build && cp dist/style.css style.min.css",
-    "build": "npm pack --dry-run"
+    "build": "npm pack --dry-run",
+    "prepare-pdf": "mkdir -p projcts && cp data/projects/Active_Learning_for_Hate_Speech_Detection.pdf projcts/AL_for_HSD.pdf"
   },
   "repository": {
     "type": "git",
