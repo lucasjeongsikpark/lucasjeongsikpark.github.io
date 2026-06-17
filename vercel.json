@@ -24,6 +24,10 @@
   ],
   "routes": [
     {
+      "src": "/projcts/AL_for_HSD\.pdf",
+      "dest": "/data/projects/Active_Learning_for_Hate_Speech_Detection.pdf"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
