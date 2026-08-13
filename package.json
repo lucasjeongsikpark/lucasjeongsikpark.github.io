@@ -1,40 +1,11 @@
 {
-  "name": "latex.css",
-  "version": "1.12.0",
-  "description": "A small CSS library to make your website look like a LaTeX document",
-  "main": "./style.min.css",
-  "files": [
-    "dist",
-    "fonts",
-    "lang",
-    "style.css",
-    "style.min.css"
-  ],
-  "scripts": {
-    "prepack": "vite build && cp dist/style.css style.min.css",
-    "build": "npm pack --dry-run",
-    "prepare-pdf": "mkdir -p projcts && cp data/projects/Active_Learning_for_Hate_Speech_Detection.pdf projcts/AL_for_HSD.pdf"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vincentdoerig/latex-css.git"
-  },
-  "keywords": [
-    "latex",
-    "latex-css",
-    "classless-theme",
-    "css"
-  ],
-  "author": "Vincent Dörig",
+  "name": "personal-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal academic website of Jeongsik Park (static site, no build step)",
+  "author": "Jeongsik Park",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vincentdoerig/latex-css/issues"
-  },
-  "homepage": "https://latex.vercel.app",
-  "devDependencies": {
-    "vite": "^4.4.9"
-  },
-  "dependencies": {
-    "latex.css": "^1.12.0"
+  "scripts": {
+    "start": "python3 -m http.server 8000"
   }
 }

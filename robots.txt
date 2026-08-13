@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Unlisted project pages (also marked noindex in their HTML)
+Disallow: /projects/
+
+Sitemap: https://lucasjeongsikpark.github.io/sitemap.xml

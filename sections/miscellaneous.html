@@ -4,49 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Miscellaneous - Jeongsik Park</title>
+  <meta name="description" content="Miscellaneous — a bit more about Jeongsik Park.">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
   <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../assets/css/section.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #f0f0f0;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 28px;
-      color: #333;
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    nav ul a {
-      text-decoration: none;
-      color: #333;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    section {
-      padding-bottom: 40px;
-    }
-
     figure {
       text-align: center;
       margin-bottom: 40px;
+    }
+
+    /* Intrinsic width/height on the <img> reserve the box before load (avoids layout shift);
+       these rules scale it down for display. */
+    figure img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
     }
 
     figcaption {
@@ -75,7 +48,7 @@
   <header>
     <nav>
       <ul>
-        <a href="../index.html">Go Home</a>
+        <li><a href="../index.html">Go Home</a></li>
       </ul>
     </nav>
     <h1>Miscellaneous</h1>
@@ -83,7 +56,7 @@
   <main>
     <section id="picture">
       <figure>
-        <img src="../images/Jeongsik.jpeg" loading="lazy" alt="Jeongsik" width="600" height="auto" />
+        <img src="../images/Jeongsik.jpeg" loading="lazy" alt="Jeongsik Park in Sausalito, CA" width="1400" height="1050" />
         <figcaption>Me during a trip to Sausalito, CA with my parents.</figcaption>
       </figure>
     </section>

@@ -1,0 +1,44 @@
+/* Shared layout for all pages under sections/.
+   Extracted verbatim from the identical <style> blocks each page used to repeat;
+   page-specific rules stay inline in each page. */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Overrides the base theme's 92vw cap so the header band reaches both edges;
+     `main` below stays centred at its own max-width. */
+  max-width: 100%;
+}
+
+header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+section {
+  padding-bottom: 40px;
+}
